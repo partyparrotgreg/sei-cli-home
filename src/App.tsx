@@ -21,8 +21,8 @@ const [count, setCount] = useState(0);
       <div className="header">
         <img src="sei-logotype.svg" className="logo" alt="SEI logotype" />
         <div className="wallet-connect">
-          <button className="primary">Connect wallet</button>
-          <button className="outline">
+          <button className="primary small">Connect wallet</button>
+          <button className="outline small">
             {truncateAddress("0x491C63bfD71882be1753931816C295Ff03657e29")}
           </button>
         </div>
@@ -57,7 +57,16 @@ const [count, setCount] = useState(0);
                 <p className="wallet-address hide-on-mobile">
                   0x491C63bfD71882be1753931816C295Ff03657e29
                 </p>
-                <button className="small outline" onClick={() => coppyToClipboard("0x491C63bfD71882be1753931816C295Ff03657e29")}>Copy</button>
+                <button
+                  className="small outline"
+                  onClick={() =>
+                    coppyToClipboard(
+                      "0x491C63bfD71882be1753931816C295Ff03657e29"
+                    )
+                  }
+                >
+                  Copy
+                </button>
               </div>
             </div>
             <div className="card-footer">
@@ -117,9 +126,14 @@ const [count, setCount] = useState(0);
               <div className="content-background space-between">
                 <small>Count</small>
                 <p>{count}</p>
-                <button className="small outline" onClick={() => {
-                  setCount(count + 1);
-                }}>Increase</button>
+                <button
+                  className="small outline"
+                  onClick={() => {
+                    setCount(count + 1);
+                  }}
+                >
+                  Increase
+                </button>
               </div>
             </div>
             <div className="card-footer">
